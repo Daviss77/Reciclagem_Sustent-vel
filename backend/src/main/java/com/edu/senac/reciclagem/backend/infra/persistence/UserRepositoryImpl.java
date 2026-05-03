@@ -37,5 +37,10 @@ public class UserRepositoryImpl implements UserRepositoryPort {
         userJpaRepository.deleteById(id);
     }
 
+    @Override
+    public boolean existsByEmail(String email){
+        return userJpaRepository.existsByEmail(email);
+    }
+
 
 }
