@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "./pages/Login";
+import Cadastro from "./pages/Cadastro";
 import Home from "./pages/Home";
 import SelectType from "./pages/SelectType";
 import Users from "./pages/Users";
@@ -11,6 +12,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Login />} />
+          <Route path="/cadastro" element={<Cadastro />} />
         <Route path="/home" element={<Home />} />
         <Route path="/admin" element={<SelectType />} />
         <Route path="/admin/users" element={<Users />} />

@@ -1,0 +1,121 @@
+.cadastro-container {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    font-family: 'Inter', sans-serif;
+    background: #3b2626;
+    overflow: hidden;
+}
+
+/* LADO VERDE */
+.left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 55%;
+    height: 100%;
+
+    background: #0b7d4f;
+    color: white;
+
+    display: flex;
+    align-items: flex-start;
+    padding: 120px 80px;
+
+    clip-path: polygon(0 0, 100% 0, 65% 100%, 0% 100%);
+}
+
+.left .content {
+    max-width: 400px;
+}
+
+.left h1 {
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+.left p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* LADO DIREITO */
+.right {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 120px;
+}
+
+.right .content {
+    width: 280px;
+    color: #e0e0e0;
+    text-align: center;
+}
+
+/* TÍTULO */
+.right h2 {
+    font-size: 34px;
+    margin-bottom: 40px;
+    font-weight: 600;
+}
+
+/* INPUTS */
+.input-group {
+    display: flex;
+    flex-direction: column; /* 🔥 isso resolve */
+    align-items: flex-start; /* opcional: alinha à esquerda */
+    margin-bottom: 25px;
+}
+.input-group label {
+    font-size: 12px;
+    color: #aaa;
+    margin-bottom: 6px;
+}
+.input-group input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 10px 0;
+    font-size: 14px;
+    text-align: center;
+}
+
+.input-group input::placeholder {
+    color: #aaa;
+}
+
+/* BOTÃO */
+button {
+    width: 100%;
+    padding: 12px;
+    background: #0b7d4f;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background: #095f3c;
+}
+
+/* TEXTO */
+.right p {
+    font-size: 12px;
+    margin-top: 15px;
+    color: #aaa;
+}
+
+.right a {
+    color: white;
+    text-decoration: underline;
+    cursor: pointer;
+}
