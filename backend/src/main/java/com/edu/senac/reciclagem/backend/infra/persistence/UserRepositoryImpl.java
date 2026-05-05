@@ -42,5 +42,10 @@ public class UserRepositoryImpl implements UserRepositoryPort {
         return userJpaRepository.existsByEmail(email);
     }
 
+    @Override
+    public Optional<User> findByEmail(String email) {
+        return userJpaRepository.findByEmail(email);
+    }
+
 
 }

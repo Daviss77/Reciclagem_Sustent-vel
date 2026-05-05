@@ -12,4 +12,5 @@ public interface UserRepositoryPort {
     List<User> findAll();
     void deleteById(UUID id);
     boolean existsByEmail(String email);
+    Optional<User> findByEmail(String email);
 }

@@ -1,11 +1,9 @@
 package com.edu.senac.reciclagem.backend.controller;
 
+import com.edu.senac.reciclagem.backend.application.dto.LoginRequest;
 import com.edu.senac.reciclagem.backend.application.dto.UserRequest;
 import com.edu.senac.reciclagem.backend.application.dto.UserResponse;
-import com.edu.senac.reciclagem.backend.application.usecase.user.CreateUserUseCase;
-import com.edu.senac.reciclagem.backend.application.usecase.user.DeleteUserUseCase;
-import com.edu.senac.reciclagem.backend.application.usecase.user.GetUserUseCase;
-import com.edu.senac.reciclagem.backend.application.usecase.user.UpdateUserUseCase;
+import com.edu.senac.reciclagem.backend.application.usecase.user.*;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -23,11 +21,18 @@ public class UserController
     private final GetUserUseCase getUserUseCase;
     private final UpdateUserUseCase updateUserUseCase;
     private final DeleteUserUseCase deleteUserUseCase;
+    private final LoginUseCase loginUseCase;
 
     @PostMapping
     public ResponseEntity<UserResponse> create(@RequestBody UserRequest request){
         UserResponse response = createUserUseCase.execute(request);
         return ResponseEntity.status(HttpStatus.CREATED).body(response);
+    }
+
+    @PostMapping("/login")
+    public ResponseEntity<UserResponse> login(@RequestBody LoginRequest request){
+        UserResponse response = loginUseCase.execute(request);
+        return ResponseEntity.ok(response);
     }
 
     @GetMapping

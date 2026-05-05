@@ -1,8 +1,41 @@
 import "./css/Cadastro.css";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { criarUsuario } from "../services/userService";
 
 function Cadastro() {
     const navigate = useNavigate();
+
+    const [formData, setFormData] = useState({
+        name: "",
+        birthDate: "",
+        email: "",
+        password: ""
+    });
+
+    const [erro, setErro] = useState(null);
+    const [carregando, setCarregando] = useState(false);
+
+    function handleChange(e) {
+        setFormData(prev => ({
+            ...prev,
+            [e.target.name]: e.target.value
+        }));
+    }
+
+    async function handleCadastro() {
+        setErro(null);
+        setCarregando(true);
+
+        try {
+            await criarUsuario(formData);
+            navigate("/");
+        } catch (err) {
+            setErro("Erro ao cadastrar. Verifique os dados e tente novamente.");
+        } finally {
+            setCarregando(false);
+        }
+    }
 
     return (
         <div className="cadastro-container">
@@ -12,7 +45,6 @@ function Cadastro() {
                     <h1>
                         CRIE SUA <br /> CONTA
                     </h1>
-
                     <p>
                         Faça parte da mudança! Cadastre-se e comece a contribuir
                         com práticas sustentáveis, encontrando pontos de coleta
@@ -27,24 +59,51 @@ function Cadastro() {
                     <h2>CADASTRO</h2>
 
                     <div className="input-group">
-                        <input type="text" placeholder="Nome" />
+                        <input
+                            type="text"
+                            name="name"
+                            placeholder="Nome"
+                            value={formData.name}
+                            onChange={handleChange}
+                        />
                     </div>
 
                     <div className="input-group">
                         <label>Data de nascimento</label>
-                        <input type="date"/>
+                        <input
+                            type="date"
+                            name="birthDate"
+                            value={formData.birthDate}
+                            onChange={handleChange}
+                        />
                     </div>
 
                     <div className="input-group">
-                        <input type="email" placeholder="Email" />
+                        <input
+                            type="email"
+                            name="email"
+                            placeholder="Email"
+                            value={formData.email}
+                            onChange={handleChange}
+                        />
                     </div>
 
                     <div className="input-group">
-                        <input type="password" placeholder="Senha" />
+                        <input
+                            type="password"
+                            name="password"
+                            placeholder="Senha"
+                            value={formData.password}
+                            onChange={handleChange}
+                        />
                     </div>
 
-                    <button onClick={() => navigate("/home")}>
-                        Cadastrar
+                    {erro && (
+                        <p style={{ color: "red", fontSize: "13px" }}>{erro}</p>
+                    )}
+
+                    <button onClick={handleCadastro} disabled={carregando}>
+                        {carregando ? "Cadastrando..." : "Cadastrar"}
                     </button>
 
                     <p>
