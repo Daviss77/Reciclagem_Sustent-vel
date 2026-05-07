@@ -6,15 +6,14 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.hibernate.annotations.UuidGenerator;
 
-import java.time.LocalDate;
 import java.util.UUID;
 
 @Entity
-@Table(name = "users")
+@Table(name = "ongs")
 @Getter
 @Setter
 @NoArgsConstructor
-public class User {
+public class Ong {
     @Id
     @GeneratedValue
     @UuidGenerator(style = UuidGenerator.Style.TIME)
@@ -24,22 +23,26 @@ public class User {
     private String name;
 
     @Column(nullable = false)
-    private LocalDate birthDate;
+    private String description;
 
-    @Column(nullable = false, unique = true)
+    @Column(nullable = false)
     private String email;
 
     @Column(nullable = false)
-    private String password;
+    private String phone;
 
     @Column(nullable = false)
-    @Enumerated(EnumType.STRING)
-    private Role role = Role.USER;
+    private String address;
 
-    public User(String name,LocalDate birthDate, String email, String password) {
+    @Column
+    private String imageUrl;
+
+    public Ong(String name, String description, String email, String phone, String address, String imageUrl) {
         this.name = name;
-        this.birthDate = birthDate;
+        this.description = description;
         this.email = email;
-        this.password = password;
+        this.phone = phone;
+        this.address = address;
+        this.imageUrl = imageUrl;
     }
 }
