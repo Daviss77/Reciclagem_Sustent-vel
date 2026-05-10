@@ -1,3 +1,5 @@
+import "./css/Login.css";
+import "./css/Home.css";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { login } from "../services/userService";
@@ -30,7 +32,12 @@ function Login() {
       // Salva o usuário na sessão para usar em outras telas
       sessionStorage.setItem("usuario", JSON.stringify(usuario));
 
-      navigate("/home");
+      if(usuario.role === "ADMIN"){
+        navigate("/admin");
+      } else{
+        navigate("/home");
+      }
+
     } catch (err) {
       setErro("E-mail ou senha inválidos.");
     } finally {

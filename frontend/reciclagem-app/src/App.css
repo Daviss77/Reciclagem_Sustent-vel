@@ -1,206 +1,10 @@
 /* RESET BASE */
-html, body, #root { 
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
-
 /* ================= LOGIN ================= */
 
-.login-container {
-  position: relative;
-  height: 100vh;
-  width: 100vw;
-  font-family: 'Inter', sans-serif;
 
-  /* 🔥 FUNDO BASE (marrom correto) */
-  background: #3b2626;
-  overflow: hidden;
-}
-
-/* 🔺 LADO VERDE COM DIAGONAL (POR CIMA) */
-.left {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 55%;
-  height: 100%;
-
-  background: #0b7d4f;
-  color: white;
-
-  display: flex;
-  align-items: flex-start;
-  padding: 60px 80px;
-
-  /* 🔥 CORTE DIAGONAL REAL */
-  clip-path: polygon(0 0, 100% 0, 48% 100%, 0% 100%);
-}
-
-.left .content {
-  max-width: 400px;
-}
-
-.left h1 {
-  font-size: 64px;
-  font-weight: 700;
-  line-height: 1.1;
-  margin-bottom: 30px;
-}
-
-.left p {
-  font-size: 16px;
-  line-height: 1.5;
-}
-
-/* 🔳 LADO DIREITO */
-.right {
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  padding-right: 120px;
-}
-
-.right .content {
-  width: 320px;
-  color: #e0e0e0;
-}
-
-/* 🔠 TÍTULO */
-.right h2 {
-  font-size: 36px;   /* 🔥 antes 28px */
-  margin-bottom: 50px;
-  font-weight: 600;  /* 🔥 mais destaque */
-  letter-spacing: 2px;
-  text-align: center;
-}
-
-/* ✏️ INPUT ESTILO LINHA */
-.input-group {
-  display: flex;
-  align-items: center;
-  border-bottom: 1px solid #ccc;
-  margin-bottom: 30px;
-}
-
-.input-group span {
-  margin-right: 10px;
-  font-size: 14px;
-}
-
-.input-group input {
-  background: transparent;
-  border: none;
-  outline: none;
-  color: white;
-  width: 100%;
-  font-size: 13px;
-  text-align: center;
-}
-
-.input-group input::placeholder {
-  color: #aaa;
-}
-
-/* TEXTO FINAL */
-.right p {
-  font-size: 12px;
-  margin-top: 5px;
-  color: #aaa;
-  text-align: center;
-}
-
-.right a {
-  color: white;
-  text-decoration: underline;
-
-}
 /* ================= HOME ================= */
 
-.home-container {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
 
-.navbar {
-  background: #008150;
-  color: white;
-  text-align: center;
-  padding: 15px;
-}
-
-.navbar h1 {
-  margin-bottom: 10px;
-  font-size: 24px;
-}
-
-/* MENU */
-.nav-list {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  padding: 0;
-}
-
-
-.nav-list li {
-  position: relative;
-  cursor: pointer;
-  font-size: 16px;
-  padding: 5px 0;
-  transition: color 0.3s ease;
-}
-
-
-.nav-list li:hover {
-  color: #c7ffd8;
-}
-
-
-.nav-list li::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  bottom: -3px;
-  width: 0%;
-  height: 2px;
-  background-color: white;
-  transition: all 0.3s ease;
-  transform: translateX(-50%);
-}
-
-
-.nav-list li:hover::after {
-  width: 100%;
-}
-
-.home-content {
-  flex: 1;
-  background: #e5e5e5;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.card {
-  background: #302222;
-  color: white;
-  padding: 30px;
-  border-radius: 20px;
-  text-align: center;
-  max-width: 500px;
-}
-
-.footer {
-  background: #008150;
-  color: white;
-  text-align: center;
-  padding: 10px;
-}
 
 /* ================= TELA DE SELEÇÃO ================= */
 
@@ -210,19 +14,19 @@ html, body, #root {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background-color: #008150; 
+  background-color: #008150;
   font-family: Arial, sans-serif;
 }
 
 .select-card {
   background-color: #302222;
-  padding: 40px 50px;  
+  padding: 40px 50px;
   border-radius: 12px;
   text-align: center;
   color: #fff;
   box-shadow: 0 4px 12px rgba(0,0,0,0.5);
-  width: 500px;        
-  max-width: 90%;      
+  width: 500px;
+  max-width: 90%;
 }
 
 .select-card h1 {
@@ -265,10 +69,10 @@ html, body, #root {
 
 .admin-left {
   flex: 1;
-  background-color: #008150; 
+  background-color: #008150;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; 
+  justify-content: space-between;
   align-items: center;
   color: #fff;
   padding: 40px;

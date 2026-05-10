@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import "./css/OptionsAdmin.css";
 
 function SelectType() {
   const navigate = useNavigate();
