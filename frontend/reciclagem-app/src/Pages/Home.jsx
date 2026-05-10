@@ -74,57 +74,192 @@ function Home() {
                 </div>
 
                 {/* SOBRE */}
-                <section ref={sobreRef} className="section">
-                    <h2>Sobre</h2>
-                    <p>
-                        Somos uma plataforma dedicada a conectar pessoas e organizações
-                        comprometidas com a reciclagem e a sustentabilidade. Nossa missão
-                        é tornar a reciclagem acessível e simples para todos. Acreditamos
-                        que pequenas atitudes diárias podem transformar o planeta. Juntos,
-                        construímos um futuro mais verde e consciente para as próximas gerações.
-                        Faça parte dessa mudança e contribua com o meio ambiente hoje mesmo.
-                    </p>
+                <section ref={sobreRef} className="section sobre-section">
+
+                    <h2 className="section-title">
+                        🌿 Sobre Nós
+                    </h2>
+
+                    <div className="sobre-container">
+
+                        <div className="sobre-card">
+
+                            <div className="sobre-icon">
+                                ♻️
+                            </div>
+
+                            <p>
+                                Somos uma plataforma dedicada a conectar pessoas e organizações
+                                comprometidas com a reciclagem e a sustentabilidade.
+                            </p>
+
+                            <p>
+                                Nossa missão é tornar a reciclagem acessível e simples para todos.
+                                Acreditamos que pequenas atitudes diárias podem transformar o planeta.
+                            </p>
+
+                            <div className="sobre-destaque">
+                                🌎 Juntos, construímos um futuro mais verde e consciente
+                                para as próximas gerações.
+                            </div>
+
+                            <p>
+                                Faça parte dessa mudança e contribua com o meio ambiente hoje mesmo.
+                            </p>
+
+                        </div>
+
+                    </div>
+
                 </section>
 
                 {/* TIPOS */}
                 <section ref={tiposRef} className="section">
-                    <h2>Tipos de Reciclagem</h2>
-                    <p>
-                        Existem diversos tipos de materiais recicláveis no nosso dia a dia:
-                        papel, papelão, plástico, vidro, metal e resíduos eletrônicos. Cada
-                        material possui um processo de reciclagem diferente e um impacto
-                        ambiental específico. O papel reciclado economiza água e árvores.
-                        O plástico reduz a poluição dos oceanos. O vidro pode ser reciclado
-                        infinitas vezes sem perder qualidade. Conhecer cada tipo é o primeiro
-                        passo para descartar corretamente.
-                    </p>
+                    <h2 className="section-title">Tipos de Reciclagem</h2>
+
+                    <div className="tipos-grid">
+
+                        <div className="tipo-card papel">
+                            <div className="icon">📄</div>
+                            <h3>Papel</h3>
+                            <p>
+                                Jornais, revistas, caixas e papelão podem ser reciclados
+                                e transformados em novos produtos.
+                            </p>
+                        </div>
+
+                        <div className="tipo-card plastico">
+                            <div className="icon">🧴</div>
+                            <h3>Plástico</h3>
+                            <p>
+                                Garrafas PET, embalagens e recipientes ajudam a reduzir
+                                a poluição dos oceanos.
+                            </p>
+                        </div>
+
+                        <div className="tipo-card vidro">
+                            <div className="icon">🍾</div>
+                            <h3>Vidro</h3>
+                            <p>
+                                O vidro pode ser reciclado infinitas vezes sem perder
+                                qualidade.
+                            </p>
+                        </div>
+
+                        <div className="tipo-card metal">
+                            <div className="icon">🥫</div>
+                            <h3>Metal</h3>
+                            <p>
+                                Latas de alumínio e aço retornam para a indústria com
+                                grande economia de energia.
+                            </p>
+                        </div>
+
+                        <div className="tipo-card eletronico">
+                            <div className="icon">💻</div>
+                            <h3>Eletrônicos</h3>
+                            <p>
+                                Celulares, computadores e cabos precisam de descarte
+                                correto para evitar contaminação.
+                            </p>
+                        </div>
+
+                    </div>
                 </section>
 
                 {/* BENEFÍCIOS */}
-                <section ref={beneficiosRef} className="section">
-                    <h2>Benefícios</h2>
-                    <p>
-                        Reciclar traz benefícios ambientais, econômicos e sociais. Reduz a
-                        quantidade de lixo nos aterros sanitários, diminui a emissão de gases
-                        poluentes e economiza energia na produção de novos materiais. Além disso,
-                        gera empregos na cadeia de reciclagem e contribui para uma economia
-                        circular mais sustentável. Cada tonelada de papel reciclado salva cerca
-                        de 20 árvores. Pequenas ações somadas fazem uma grande diferença.
-                    </p>
+                <section ref={beneficiosRef} className="section beneficios-section">
+
+                    <h2 className="section-title">
+                        ♻️ Benefícios
+                    </h2>
+
+                    <div className="beneficios-container">
+
+                        <div className="beneficios-texto">
+                            <p>
+                                Reciclar traz benefícios ambientais, econômicos e sociais.
+                                Reduz a quantidade de lixo nos aterros sanitários, diminui
+                                a emissão de gases poluentes e economiza energia na produção
+                                de novos materiais.
+                            </p>
+
+                            <p>
+                                Além disso, gera empregos na cadeia de reciclagem e contribui
+                                para uma economia circular mais sustentável.
+                            </p>
+
+                            <div className="beneficio-destaque">
+                                🌳 Cada tonelada de papel reciclado salva cerca de
+                                <strong> 20 árvores.</strong>
+                            </div>
+
+                            <p>
+                                Pequenas ações somadas fazem uma grande diferença.
+                            </p>
+                        </div>
+
+                    </div>
+
                 </section>
 
                 {/* DICAS */}
-                <section ref={dicasRef} className="section">
-                    <h2>Dicas</h2>
-                    <p>
-                        Separe o lixo em casa utilizando lixeiras coloridas para cada tipo de
-                        material. Lave as embalagens antes de descartar para evitar contaminação.
-                        Procure pontos de coleta seletiva próximos à sua residência. Evite
-                        misturar resíduos orgânicos com recicláveis. Prefira produtos com menos
-                        embalagem e opte por embalagens retornáveis quando possível. Compartilhe
-                        essas dicas com amigos e familiares e multiplique o impacto positivo
-                        no meio ambiente.
-                    </p>
+                <section ref={dicasRef} className="section dicas-section">
+
+                    <h2 className="section-title">
+                        💡 Dicas de Reciclagem
+                    </h2>
+
+                    <div className="dicas-container">
+
+                        <div className="dica-item">
+                            <span className="dica-icon">🗑️</span>
+                            <p>
+                                Separe o lixo em casa utilizando lixeiras coloridas
+                                para cada tipo de material.
+                            </p>
+                        </div>
+
+                        <div className="dica-item">
+                            <span className="dica-icon">🚿</span>
+                            <p>
+                                Lave as embalagens antes de descartar para evitar
+                                contaminação.
+                            </p>
+                        </div>
+
+                        <div className="dica-item">
+                            <span className="dica-icon">📍</span>
+                            <p>
+                                Procure pontos de coleta seletiva próximos à sua residência.
+                            </p>
+                        </div>
+
+                        <div className="dica-item">
+                            <span className="dica-icon">♻️</span>
+                            <p>
+                                Evite misturar resíduos orgânicos com recicláveis.
+                            </p>
+                        </div>
+
+                        <div className="dica-item">
+                            <span className="dica-icon">📦</span>
+                            <p>
+                                Prefira produtos com menos embalagem e opte por embalagens
+                                retornáveis quando possível.
+                            </p>
+                        </div>
+
+                        <div className="dica-item destaque-dica">
+                            <span className="dica-icon">🌍</span>
+                            <p>
+                                Compartilhe essas dicas com amigos e familiares e multiplique
+                                o impacto positivo no meio ambiente.
+                            </p>
+                        </div>
+
+                    </div>
+
                 </section>
 
                 {/* ONGs */}

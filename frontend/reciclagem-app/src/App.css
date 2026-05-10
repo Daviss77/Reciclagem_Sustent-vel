@@ -59,6 +59,244 @@
   transform: scale(1.05);
 }
 
+.section-title {
+    font-size: 32px;
+    color: #008150;
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.tipos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.tipo-card {
+    background: white;
+    border-radius: 20px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.tipo-card:hover {
+    transform: translateY(-8px);
+}
+
+.tipo-card .icon {
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+.tipo-card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #222;
+}
+
+.tipo-card p {
+    color: #555;
+    line-height: 1.6;
+}
+
+/* CORES DOS CARDS */
+
+.papel {
+    border-top: 8px solid #4CAF50;
+}
+
+.plastico {
+    border-top: 8px solid #2196F3;
+}
+
+.vidro {
+    border-top: 8px solid #00BCD4;
+}
+
+.metal {
+    border-top: 8px solid #9C27B0;
+}
+
+.eletronico {
+    border-top: 8px solid #FF9800;
+}
+
+.beneficios-section {
+    background: linear-gradient(to bottom, #f5fff8, #ecfff3);
+}
+
+.beneficios-container {
+    max-width: 900px;
+    margin: auto;
+}
+
+.beneficios-texto {
+    background: white;
+    padding: 40px;
+    border-radius: 25px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    border-left: 8px solid #008150;
+    position: relative;
+}
+
+.beneficios-texto::before {
+    content: "♻️";
+    position: absolute;
+    top: -20px;
+    right: 25px;
+    font-size: 60px;
+    opacity: 0.15;
+}
+
+.beneficios-texto p {
+    font-size: 18px;
+    line-height: 1.9;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+.beneficio-destaque {
+    background: #008150;
+    color: white;
+    padding: 20px;
+    border-radius: 18px;
+    margin: 30px 0;
+    font-size: 20px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+.beneficio-destaque strong {
+    font-size: 24px;
+}
+
+.dicas-section {
+    background: linear-gradient(to bottom, #ffffff, #f4fff8);
+}
+
+.dicas-container {
+    max-width: 950px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.dica-item {
+    background: white;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 22px 25px;
+    border-radius: 18px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    border-left: 6px solid #008150;
+    transition: all 0.3s ease;
+}
+
+.dica-item:hover {
+    transform: translateX(8px);
+    box-shadow: 0 8px 22px rgba(0,0,0,0.12);
+}
+
+.dica-icon {
+    font-size: 38px;
+    min-width: 50px;
+    text-align: center;
+}
+
+.dica-item p {
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.7;
+    color: #444;
+}
+
+.destaque-dica {
+    background: #008150;
+    color: white;
+    border-left: none;
+}
+
+.destaque-dica p {
+    color: white;
+}
+
+.destaque-dica .dica-icon {
+    font-size: 42px;
+}
+
+.sobre-section {
+    background: linear-gradient(to bottom, #f7fff9, #effcf3);
+}
+
+.sobre-container {
+    max-width: 950px;
+    margin: auto;
+}
+
+.sobre-card {
+    background: white;
+    padding: 50px 45px;
+    border-radius: 30px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    position: relative;
+    overflow: hidden;
+    border-top: 8px solid #008150;
+}
+
+.sobre-card::before {
+    content: "🌱";
+    position: absolute;
+    font-size: 120px;
+    right: -10px;
+    top: -10px;
+    opacity: 0.08;
+}
+
+.sobre-icon {
+    width: 90px;
+    height: 90px;
+    background: #008150;
+    color: white;
+    font-size: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 0 auto 30px auto;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+.sobre-card p {
+    font-size: 19px;
+    line-height: 1.9;
+    color: #444;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.sobre-destaque {
+    background: linear-gradient(135deg, #008150, #00a86b);
+    color: white;
+    padding: 25px;
+    border-radius: 20px;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    margin: 35px 0;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.12);
+}
+
+.sobre-card:hover {
+    transform: translateY(-6px);
+    transition: 0.3s ease;
+}
 /* ================= ADMIN ================= */
 
 .admin-container {
