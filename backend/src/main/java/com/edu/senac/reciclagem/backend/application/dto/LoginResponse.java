@@ -4,8 +4,9 @@ import com.edu.senac.reciclagem.backend.domain.entity.Role;
 
 import java.util.UUID;
 
-public record LoginRequest(
+public record LoginResponse(
+        UUID id,
+        String name,
         String email,
-        String password
-) {
-}
+        Role role
+){}

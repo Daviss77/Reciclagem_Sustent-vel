@@ -1,7 +1,7 @@
 package com.edu.senac.reciclagem.backend.application.usecase.user;
 
+import com.edu.senac.reciclagem.backend.application.dto.LoginResponse;
 import com.edu.senac.reciclagem.backend.application.dto.LoginRequest;
-import com.edu.senac.reciclagem.backend.application.dto.UserResponse;
 import com.edu.senac.reciclagem.backend.application.port.UserRepositoryPort;
 import com.edu.senac.reciclagem.backend.domain.entity.User;
 import lombok.RequiredArgsConstructor;
@@ -13,7 +13,7 @@ public class LoginUseCase {
 
     private final UserRepositoryPort repository;
 
-    public UserResponse execute(LoginRequest request){
+    public LoginResponse execute(LoginRequest request){
         User user = repository.findByEmail(request.email())
                 .orElseThrow(() -> new IllegalArgumentException("E-mail ou senha inválidos"));
 
@@ -21,14 +21,11 @@ public class LoginUseCase {
             throw new IllegalArgumentException("E-mail ou senha inválidos");
         }
 
-        return new UserResponse(
+        return new LoginResponse(
                 user.getId(),
                 user.getName(),
-                user.getBirthDate(),
-                user.getEmail()
+                user.getEmail(),
+                user.getRole()
         );
     }
-
-
-
 }

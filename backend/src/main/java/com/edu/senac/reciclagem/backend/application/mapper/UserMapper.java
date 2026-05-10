@@ -1,7 +1,7 @@
 package com.edu.senac.reciclagem.backend.application.mapper;
 
-import com.edu.senac.reciclagem.backend.application.dto.UserRequest;
-import com.edu.senac.reciclagem.backend.application.dto.UserResponse;
+import com.edu.senac.reciclagem.backend.application.dto.users.UserRequest;
+import com.edu.senac.reciclagem.backend.application.dto.users.UserResponse;
 import com.edu.senac.reciclagem.backend.domain.entity.User;
 import org.springframework.stereotype.Component;
 

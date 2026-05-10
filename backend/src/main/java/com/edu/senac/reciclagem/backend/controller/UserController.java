@@ -1,8 +1,10 @@
 package com.edu.senac.reciclagem.backend.controller;
 
 import com.edu.senac.reciclagem.backend.application.dto.LoginRequest;
-import com.edu.senac.reciclagem.backend.application.dto.UserRequest;
-import com.edu.senac.reciclagem.backend.application.dto.UserResponse;
+import com.edu.senac.reciclagem.backend.application.dto.LoginResponse;
+import com.edu.senac.reciclagem.backend.application.dto.users.UserRequest;
+import com.edu.senac.reciclagem.backend.application.dto.users.UserResponse;
+import com.edu.senac.reciclagem.backend.application.usecase.user.LoginUseCase;
 import com.edu.senac.reciclagem.backend.application.usecase.user.*;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -30,9 +32,8 @@ public class UserController
     }
 
     @PostMapping("/login")
-    public ResponseEntity<UserResponse> login(@RequestBody LoginRequest request){
-        UserResponse response = loginUseCase.execute(request);
-        return ResponseEntity.ok(response);
+    public ResponseEntity<LoginResponse> login(@RequestBody LoginRequest request){
+        return ResponseEntity.ok(loginUseCase.execute(request));
     }
 
     @GetMapping
@@ -51,7 +52,7 @@ public class UserController
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<UserResponse> delete(@PathVariable UUID id){
+    public ResponseEntity<Void> delete(@PathVariable UUID id){
         deleteUserUseCase.execute(id);
         return ResponseEntity.noContent().build();
     }

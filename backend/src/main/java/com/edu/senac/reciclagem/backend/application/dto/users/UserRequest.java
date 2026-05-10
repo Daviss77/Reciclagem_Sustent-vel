@@ -1,4 +1,4 @@
-package com.edu.senac.reciclagem.backend.application.dto;
+package com.edu.senac.reciclagem.backend.application.dto.users;
 
 import java.time.LocalDate;
 

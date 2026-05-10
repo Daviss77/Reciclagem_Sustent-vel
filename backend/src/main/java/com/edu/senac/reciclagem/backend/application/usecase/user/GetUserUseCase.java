@@ -1,11 +1,12 @@
 package com.edu.senac.reciclagem.backend.application.usecase.user;
 
-import com.edu.senac.reciclagem.backend.application.dto.UserResponse;
+import com.edu.senac.reciclagem.backend.application.dto.users.UserResponse;
 import com.edu.senac.reciclagem.backend.application.mapper.UserMapper;
 import com.edu.senac.reciclagem.backend.application.port.UserRepositoryPort;
 import com.edu.senac.reciclagem.backend.domain.entity.User;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 import java.util.UUID;
@@ -20,6 +21,12 @@ public class GetUserUseCase {
     public UserResponse findById(UUID id){
         User user = repository.findById(id).orElseThrow(() -> new IllegalArgumentException("Usuário não encontrado"));
 
+        return mapper.toResponse(user);
+    }
+
+    public UserResponse findByEmail(@RequestParam String email){
+        User user = repository.findByEmail(email)
+                .orElseThrow(() -> new IllegalArgumentException("Usuário não encontrado"));
         return mapper.toResponse(user);
     }
 
