@@ -2,7 +2,11 @@ Este projeto tem como objetivo promover a conscientização ambiental e o descar
 
 Integrantes do Grupo: 
 ANA BEATRIZ MARTINS BEZERRA
+
 DAVI DA SILVA SANTANA
+
 MATHEUS DE MAGALHAES PALHARES
+
 MELISSA GONCALVES MENDES
+
 ARTHUR RODRIGUES PORTELA
