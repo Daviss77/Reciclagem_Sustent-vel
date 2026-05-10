@@ -39,8 +39,10 @@ function Home() {
                 textAlign: "center",
                 padding: "15px",
                 color: "white",
-                position: "sticky",
+                position: "fixed",
                 top: 0,
+                left: 0,
+                right: 0,
                 zIndex: 100
             }}>
                 <h1 style={{ margin: "0 0 10px 0", fontSize: "24px" }}>
@@ -63,7 +65,7 @@ function Home() {
                 </ul>
             </nav>
 
-            <main className="home-content">
+            <main className="home-content" style={{paddingTop: "90px"}}>
 
                 {/* HERO */}
                 <div className="hero">

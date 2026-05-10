@@ -1,6 +1,6 @@
 /* HOME CONTENT */
 .home-container {
-    min-height: 100vh;
+    min-height: 100%;
     display: flex;
     flex-direction: column;
 }
@@ -9,7 +9,6 @@
     flex: 1;
     display: flex;
     flex-direction: column;
-    overflow-y: auto;
 }
 
 /* HERO */
